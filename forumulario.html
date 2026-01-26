@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de aluno</title>
+  </head>
+
+  <body>
+    <form>
+      <fieldset>
+        <legend>Dados pessoais</legend>
+
+        Nome: <input type="text" /> Data de Nascimento: <input type="date" />
+        <br />
+
+        Escolaridade:
+        <select>
+          <option>Fundamental</option>
+          <option>Médio</option>
+          <option>Técnico</option>
+          <option>Superior</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Informações do Curso</legend>
+
+        Curso: <input type="text" />
+        Turno:
+        <select>
+          <option>Manhã</option>
+          <option>Tarde</option>
+          <option>Noite</option>
+        </select>
+        <br />
+
+        Valor:
+        <input type="number" /> <br />
+
+        Pré-requesitos: <br />
+        <input type="checkbox" /> Informática Básica <br />
+        <input type="checkbox" /> Inglês Básico <br />
+        <input type="checkbox" /> Disponibilidade Para Aulas Presenciais <br />
+      </fieldset>
+
+      <fieldset>
+        <legend>Endereço</legend>
+
+        Rua: <input type="text" /> Número: <input type="number" /> Bairro:
+        <input type="text" /> <br />
+        Cidade: <input type="text" /> Estado: <input type="text" />
+      </fieldset>
+
+      <button>Salvar</button>
+    </form>
+  </body>
+</html>

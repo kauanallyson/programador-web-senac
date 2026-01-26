@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de pedido</title>
+  </head>
+
+  <body>
+    <form>
+      <fieldset>
+        <legend>Formulário de pedido</legend>
+        <table border="1" align="center">
+          <tr>
+            <th>Produto</th>
+            <td colspan="3">
+              <select name="produto" required>
+                <option value="" disabled selected hidden>
+                  Selecione um produto
+                </option>
+                <option value="mouse">Mouse AttackShark X11</option>
+                <option value="monitor">Monitor AOC 27B35H 120hz</option>
+                <option value="teclado">Teclado Machenike K500</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <th>Preço</th>
+            <td>
+              R$
+              <input type="number" name="preco" placeholder="0,00" required />
+            </td>
+            <th>Quantidade</th>
+            <td>
+              <input type="number" name="quantidade" placeholder="0" required />
+              und
+            </td>
+          </tr>
+          <tr>
+            <th>Forma de pagamento</th>
+            <td colspan="3">
+              <input
+                type="radio"
+                name="pagamento"
+                value="pix"
+                checked
+                required
+              />
+              Pix
+              <input type="radio" name="pagamento" value="debito" />
+              Débito
+              <input type="radio" name="pagamento" value="credito" />
+              Crédito
+            </td>
+          </tr>
+          <tr>
+            <td colspan="4">
+              <button type="submit" value="fazerPedido">Fazer pedido</button>
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+    </form>
+  </body>
+</html>

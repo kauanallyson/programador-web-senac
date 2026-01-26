@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabela com css</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #f2f6fa;
+        padding: 20px;
+      }
+      table {
+        width: clamp(400px, 60%, 700px);
+        margin: auto;
+        border-collapse: collapse;
+        background-color: #fff;
+        box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2);
+      }
+      tr:hover {
+        background-color: #f1f1f1;
+      }
+      th,
+      td {
+        vertical-align: middle;
+        padding: 12px;
+        border-bottom: 1px solid #ddd;
+      }
+      th {
+        color: white;
+        text-align: center;
+        background-color: #5a5a5a;
+      }
+      td:has(a, img) {
+        text-align: center;
+      }
+      a {
+        color: black;
+        text-decoration: none;
+        transition: all 200ms;
+      }
+      a:hover {
+        color: #10a0c0;
+        text-decoration: underline;
+      }
+      img {
+        width: 40px;
+        aspect-ratio: 1;
+        object-fit: contain;
+      }
+      span {
+        color: #ff4141;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>Logo</th>
+          <th>Tecnologia</th>
+          <th>Wikipédia</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/250px-HTML5_logo_and_wordmark.svg.png"
+              alt="html" />
+          </td>
+          <td>HTML - HyperText Markup Language</td>
+          <td>
+            <a target="_blank" href="https://pt.wikipedia.org/wiki/HTML">
+              Acessar
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Official_CSS_Logo.svg/250px-Official_CSS_Logo.svg.png"
+              alt="css" />
+          </td>
+          <td>CSS - Cascading Style Sheets</td>
+          <td>
+            <a target="_blank" href="https://pt.wikipedia.org/wiki/CSS">
+              Acessar
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/250px-Unofficial_JavaScript_logo_2.svg.png"
+              alt="js" />
+          </td>
+          <td>JS - JavaScript</td>
+          <td>
+            <a target="_blank" href="https://pt.wikipedia.org/wiki/JavaScript">
+              Acessar
+            </a>
+          </td>
+        </tr>
+      </tbody>
+
+      <tfoot>
+        <tr>
+          <td colspan="3"><span>*</span>Linguagens Front-end</td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>
