@@ -3,61 +3,74 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Senac</title>
+    <title>Senac - Programador Web</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
     <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous" />
-
     <!-- Font Awesome -->
     <script
       src="https://kit.fontawesome.com/2da055be12.js"
       crossorigin="anonymous"></script>
   </head>
-  <body>
-    <main class="container">
-      <div class="card">
-        <div class="card-header">Programador Web 2026</div>
-        <div class="card-body">
-          <h5 class="card-text">Estudos em html e css (bootstrap)</h5>
-          <p class="card-text">Lista de Tópicos</p>
+
+  <body class="bg-light">
+    <main class="container vh-100 d-flex align-items-center">
+      <div class="row justify-content-center w-100">
+        <div class="col-12 col-md-8 col-lg-6">
+          <div class="card shadow">
+            <div class="card-header text-center fw-bold">
+              <i class="fa-solid fa-code"></i> Programador Web 2026
+            </div>
+
+            <div class="card-body text-center">
+              <h5 class="card-title">Estudos em HTML e CSS (Bootstrap)</h5>
+              <p class="card-subtitle text-muted">Lista de tópicos</p>
+            </div>
+
+            <ol class="list-group list-group-flush">
+              <li class="list-group-item">
+                <a href="html-css-basico/historiaWeb.html">História da Web</a>
+              </li>
+              <li class="list-group-item">
+                <a href="html-css-basico/listaOrdenada.html">Lista ordenada</a>
+              </li>
+              <li class="list-group-item">
+                <a href="html-css-basico/formulario.html">Formulários</a>
+              </li>
+              <li class="list-group-item">
+                <a href="html-css-basico/formulario2.html"
+                  >Formulários – Parte 2</a
+                >
+              </li>
+              <li class="list-group-item">
+                <a href="bootstrap/card.html">Cards</a>
+              </li>
+              <li class="list-group-item">
+                <a href="bootstrap/carrossel.html">Carousel</a>
+              </li>
+              <li class="list-group-item">
+                <a href="bootstrap/navbar.html">Barra de navegação</a>
+              </li>
+              <li class="list-group-item">
+                <a href="bootstrap/table.html">Tabelas</a>
+              </li>
+              <li class="list-group-item">
+                <a href="bootstrap/responsividade.html">Responsividade</a>
+              </li>
+              <li class="list-group-item">
+                <a href="bootstrap/row.html">Rows</a>
+              </li>
+            </ol>
+          </div>
         </div>
-        <ol class="list-group list-group-flush">
-          <li class="list-group-item">
-            <a href="html-css-basico/historiaWeb.html">historia web</a>
-          </li>
-          <li class="list-group-item">
-            <a href="html-css-basico/listaOrdenada.html">lista ordenada</a>
-          </li>
-          <li class="list-group-item">
-            <a href="html-css-basico/forumulario.html">forms</a>
-          </li>
-          <li class="list-group-item">
-            <a href="html-css-basico/formulario2.html">forms pt2</a>
-          </li>
-          <li class="list-group-item">
-            <a href="bootstrap/card.html">cards</a>
-          </li>
-          <li class="list-group-item">
-            <a href="bootstrap/carrossel.html">carousel</a>
-          </li>
-          <li class="list-group-item">
-            <a href="bootstrap/navbar.html">barra de navegação</a>
-          </li>
-          <li class="list-group-item">
-            <a href="bootstrap/table.html">tabelas</a>
-          </li>
-          <li class="list-group-item">
-            <a href="bootstrap/responvisvidade.html">responsividade</a>
-          </li>
-          <li class="list-group-item">
-            <a href="bootstrap/row.html">rows</a>
-          </li>
-        </ol>
       </div>
     </main>
+
     <!-- Bootstrap JS -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
