@@ -1,150 +1,127 @@
 <!doctype html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Clone Uva</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous" />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"></script>
-    <style>
-      #banner {
-        background-image: url(https://aluno.uvanet.br/common/images/back_ondas.gif);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        min-height: 120px;
-      }
-      .icon {
-        width: 15px;
-        margin-right: 6px;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container-fluid">
-      <header class="row align-items-center px-3 mb-3 border border-bottom">
-        <div class="col-6 col-md-4">
-          <img
-            src="https://aluno.uvanet.br/common/images/uva.gif"
-            class="img-fluid"
-            alt="Logo UVA" />
-        </div>
-        <div class="p-2 col-6 col-md-4 ms-auto" id="banner">
-          <h5 class="h6 fw-semibold text-end">Sistema UVA - Módulo Aluno</h5>
-          <p class="text-end lh-sm mb-0">
-            Curso: Curso <br />
-            Semestre: 2026.1 <br />
-            Usuário: aluno <br />
-            Último acesso: 21/01/2026 às 15:50
-          </p>
-        </div>
-      </header>
-      <main>
-        <div class="row justify-content-center mb-3">
-          <div class="col-lg-4 col-md-6 col-sm-8">
-            <div class="card">
-              <h5 class="card-header text-center">Recursos</h5>
-              <ul class="list-group list-group-flush text-start">
-                <li class="list-group-item d-flex align-items-center">
-                  <img
-                    class="icon"
-                    src="https://cdn-icons-png.flaticon.com/256/1384/1384060.png" />
-                  <a
-                    class="link-primary"
-                    href="https://www.youtube.com/watch?v=PL2dO4KwArY">
-                    Programando em C no Linux
-                  </a>
-                </li>
-                <li class="list-group-item d-flex align-items-center">
-                  <img
-                    class="icon"
-                    src="https://cdn-icons-png.flaticon.com/256/1384/1384060.png" />
-                  <a
-                    class="link-primary"
-                    href="https://www.youtube.com/watch?v=V1wKq-rWnu0">
-                    Programando em C no Windows
-                  </a>
-                </li>
-                <li class="list-group-item d-flex align-items-center">
-                  <img
-                    class="icon"
-                    src="https://cdn-icons-png.flaticon.com/256/733/733554.png" />
-                  <a class="link-primary" href="#"> Materiais de apoio </a>
-                </li>
-              </ul>
-            </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clone Uva</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+  <style>
+    #banner {
+      background-image: url(https://aluno.uvanet.br/common/images/back_ondas.gif);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 120px;
+    }
+
+    .icon {
+      width: 15px;
+      margin-right: 6px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <header class="row align-items-center px-3 mb-3 border border-bottom">
+      <div class="col-6 col-md-4">
+        <img src="https://aluno.uvanet.br/common/images/uva.gif" class="img-fluid" alt="Logo UVA" />
+      </div>
+      <div class="p-2 col-6 col-md-4 ms-auto" id="banner">
+        <h5 class="h6 fw-semibold text-end">Sistema UVA - Módulo Aluno</h5>
+        <p class="text-end lh-sm mb-0">
+          Curso: Curso <br />
+          Semestre: 2026.1 <br />
+          Usuário: aluno <br />
+          Último acesso: 21/01/2026 às 15:50
+        </p>
+      </div>
+    </header>
+    <main>
+      <div class="row justify-content-center mb-3">
+        <div class="col-lg-4 col-md-6 col-sm-8">
+          <div class="card">
+            <h5 class="card-header text-center">Recursos</h5>
+            <ul class="list-group list-group-flush text-start">
+              <li class="list-group-item d-flex align-items-center">
+                <img class="icon" src="https://cdn-icons-png.flaticon.com/256/1384/1384060.png" />
+                <a class="link-primary" href="https://www.youtube.com/watch?v=PL2dO4KwArY">
+                  Programando em C no Linux
+                </a>
+              </li>
+              <li class="list-group-item d-flex align-items-center">
+                <img class="icon" src="https://cdn-icons-png.flaticon.com/256/1384/1384060.png" />
+                <a class="link-primary" href="https://www.youtube.com/watch?v=V1wKq-rWnu0">
+                  Programando em C no Windows
+                </a>
+              </li>
+              <li class="list-group-item d-flex align-items-center">
+                <img class="icon" src="https://cdn-icons-png.flaticon.com/256/733/733554.png" />
+                <a class="link-primary" href="#"> Materiais de apoio </a>
+              </li>
+            </ul>
           </div>
         </div>
-        <div class="row justify-content-center mb-3">
-          <div class="col-lg-4 col-md-6 col-sm-8">
-            <div class="card">
-              <h5 class="card-header text-center">Tarefas e Fóruns</h5>
-              <ul class="list-group list-group-flush text-start">
-                <li class="list-group-item d-flex align-items-center">
-                  <img
-                    src="https://cdn-icons-png.flaticon.com/256/566/566985.png"
-                    class="icon" />
-                  <span class="card-text">Tarefa 01 - Pensamento lógico</span>
-                </li>
-                <li class="list-group-item d-flex align-items-center">
-                  <img
-                    src="https://cdn-icons-png.flaticon.com/256/566/566985.png"
-                    class="icon" />
-                  <span class="card-text">
-                    Tarefa 02 - Primeiros programas
-                  </span>
-                </li>
-                <li class="list-group-item d-flex align-items-center">
-                  <img
-                    src="https://cdn-icons-png.flaticon.com/256/566/566985.png"
-                    class="icon" />
-                  <span class="card-text">Tarefa 03 - Algoritmo</span>
-                </li>
-              </ul>
-            </div>
+      </div>
+      <div class="row justify-content-center mb-3">
+        <div class="col-lg-4 col-md-6 col-sm-8">
+          <div class="card">
+            <h5 class="card-header text-center">Tarefas e Fóruns</h5>
+            <ul class="list-group list-group-flush text-start">
+              <li class="list-group-item d-flex align-items-center">
+                <img src="https://cdn-icons-png.flaticon.com/256/566/566985.png" class="icon" />
+                <span class="card-text">Tarefa 01 - Pensamento lógico</span>
+              </li>
+              <li class="list-group-item d-flex align-items-center">
+                <img src="https://cdn-icons-png.flaticon.com/256/566/566985.png" class="icon" />
+                <span class="card-text">
+                  Tarefa 02 - Primeiros programas
+                </span>
+              </li>
+              <li class="list-group-item d-flex align-items-center">
+                <img src="https://cdn-icons-png.flaticon.com/256/566/566985.png" class="icon" />
+                <span class="card-text">Tarefa 03 - Algoritmo</span>
+              </li>
+            </ul>
           </div>
         </div>
-        <div class="row justify-content-center mb-3">
-          <div class="col-lg-4 col-md-6 col-sm-8">
-            <div class="card">
-              <h5 class="card-header text-center">Avaliações</h5>
-              <ul class="list-group list-group-flush text-start">
-                <li class="list-group-item d-flex align-items-center">
-                  <img
-                    class="icon"
-                    src="https://cdn-icons-png.flaticon.com/256/833/833593.png" />
-                  <span class="card-text">AP1 - Sistema de Notas em C</span>
-                </li>
-              </ul>
-            </div>
+      </div>
+      <div class="row justify-content-center mb-3">
+        <div class="col-lg-4 col-md-6 col-sm-8">
+          <div class="card">
+            <h5 class="card-header text-center">Avaliações</h5>
+            <ul class="list-group list-group-flush text-start">
+              <li class="list-group-item d-flex align-items-center">
+                <img class="icon" src="https://cdn-icons-png.flaticon.com/256/833/833593.png" />
+                <span class="card-text">AP1 - Sistema de Notas em C</span>
+              </li>
+            </ul>
           </div>
         </div>
-        <div class="row justify-content-center">
-          <div class="col-lg-4 col-md-6 col-sm-8">
-            <div class="card">
-              <h5 class="card-header text-center">Mensagens</h5>
-              <ul class="list-group list-group-flush text-start">
-                <li class="list-group-item d-flex align-items-center">
-                  <img
-                    class="icon"
-                    src="https://cdn-icons-png.flaticon.com/256/685/685887.png" />
-                  <span class="card-text">Aviso sobre aula dia 17/02</span>
-                  <span class="text-muted" style="font-size: 0.7rem">
-                    - Professor X | 10/02 | 10 visualizações
-                  </span>
-                </li>
-              </ul>
-            </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-4 col-md-6 col-sm-8">
+          <div class="card">
+            <h5 class="card-header text-center">Mensagens</h5>
+            <ul class="list-group list-group-flush text-start">
+              <li class="list-group-item d-flex align-items-center">
+                <img class="icon" src="https://cdn-icons-png.flaticon.com/256/685/685887.png" />
+                <span class="card-text">Aviso sobre aula dia 17/02</span>
+                <span class="text-muted" style="font-size: 0.7rem">
+                  - Professor X | 10/02 | 10 visualizações
+                </span>
+              </li>
+            </ul>
           </div>
         </div>
-      </main>
-    </div>
-  </body>
+      </div>
+    </main>
+  </div>
+</body>
+
 </html>

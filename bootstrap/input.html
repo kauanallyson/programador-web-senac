@@ -1,101 +1,81 @@
 <!doctype html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Tipos de input</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous" />
+  <title>Tipos de input</title>
 
-    <!-- Font Awesome -->
-    <script
-      src="https://kit.fontawesome.com/2da055be12.js"
-      crossorigin="anonymous"></script>
-  </head>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
 
-  <body>
-    <div class="container py-5">
-      <div class="row justify-content-center">
-        <div class="col-md-8 col-lg-6">
-          <div class="card shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title mb-4">Formulário de Cadastro</h5>
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/2da055be12.js" crossorigin="anonymous"></script>
+</head>
 
-              <form>
-                <!-- Email -->
-                <div class="mb-3">
-                  <label for="email" class="form-label">
-                    Endereço de email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    class="form-control"
-                    placeholder="E-mail"
-                    required />
-                  <div class="form-text">
-                    Nunca vamos compartilhar seu e-mail com ninguém.
-                  </div>
+<body>
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title mb-4">Formulário de Cadastro</h5>
+
+            <form>
+              <!-- Email -->
+              <div class="mb-3">
+                <label for="email" class="form-label">
+                  Endereço de email
+                </label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="E-mail" required />
+                <div class="form-text">
+                  Nunca vamos compartilhar seu e-mail com ninguém.
                 </div>
+              </div>
 
-                <!-- Senha -->
-                <div class="mb-3">
-                  <label for="password" class="form-label">Senha</label>
-                  <input
-                    type="password"
-                    id="password"
-                    name="password"
-                    class="form-control"
-                    placeholder="Senha"
-                    required />
-                </div>
+              <!-- Senha -->
+              <div class="mb-3">
+                <label for="password" class="form-label">Senha</label>
+                <input type="password" id="password" name="password" class="form-control" placeholder="Senha"
+                  required />
+              </div>
 
-                <!-- Setor -->
-                <div class="mb-3">
-                  <label for="setor" class="form-label">Setor</label>
-                  <select id="setor" name="setor" class="form-select" required>
-                    <option value="">Selecione um setor</option>
-                    <option value="adm">Administrativo</option>
-                    <option value="ctb">Contábil</option>
-                    <option value="atd">Atendimento</option>
-                  </select>
-                </div>
+              <!-- Setor -->
+              <div class="mb-3">
+                <label for="setor" class="form-label">Setor</label>
+                <select id="setor" name="setor" class="form-select" required>
+                  <option value="">Selecione um setor</option>
+                  <option value="adm">Administrativo</option>
+                  <option value="ctb">Contábil</option>
+                  <option value="atd">Atendimento</option>
+                </select>
+              </div>
 
-                <!-- Termos -->
-                <div class="mb-4 form-check">
-                  <input
-                    type="checkbox"
-                    name="termos"
-                    id="termos"
-                    class="form-check-input"
-                    required />
-                  <label for="termos" class="form-check-label">
-                    Aceito os termos e condições.
-                  </label>
-                </div>
+              <!-- Termos -->
+              <div class="mb-4 form-check">
+                <input type="checkbox" name="termos" id="termos" class="form-check-input" required />
+                <label for="termos" class="form-check-label">
+                  Aceito os termos e condições.
+                </label>
+              </div>
 
-                <!-- Botão -->
-                <button type="submit" class="btn btn-primary w-100">
-                  Enviar <i class="fas fa-upload"></i>
-                </button>
-              </form>
-            </div>
+              <!-- Botão -->
+              <button type="submit" class="btn btn-primary w-100">
+                Enviar <i class="fas fa-upload"></i>
+              </button>
+            </form>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Bootstrap JS -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"></script>
-  </body>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
