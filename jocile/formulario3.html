@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="formulario3.css" />
+  <title>Cadastro de Classes</title>
+</head>
+
+<body>
+  <main class="container">
+    <h1>Formulário de Cadastro</h1>
+
+    <form>
+      <div class="grid">
+
+        <div class="item-group">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required />
+        </div>
+
+        <div class="item-group">
+          <label for="sobrenome">Sobrenome:</label>
+          <input type="text" id="sobrenome" name="sobrenome" placeholder="Digite seu sobrenome" required />
+        </div>
+
+        <div class="item-group">
+          <label for="idade">Idade:</label>
+          <input type="number" id="idade" name="idade" min="1" max="99" placeholder="Ex: 25" required />
+        </div>
+
+        <div class="item-group">
+          <label for="nascimento">Data de nascimento:</label>
+          <input type="date" id="nascimento" name="nascimento" required />
+        </div>
+
+        <div class="item-group">
+          <label for="escolaridade">Escolaridade:</label>
+          <select id="escolaridade" name="escolaridade" required>
+            <option value="">Selecione</option>
+            <option value="ensinoFundamentalI">Ensino fundamental incompleto</option>
+            <option value="ensinoFundamentalC">Ensino fundamental completo</option>
+            <option value="ensinoMedioI">Ensino médio incompleto</option>
+            <option value="ensinoMedioC">Ensino médio completo</option>
+            <option value="ensinoSuperiorI">Ensino superior incompleto</option>
+            <option value="ensinoSuperiorC">Ensino superior completo</option>
+          </select>
+        </div>
+
+        <div class="item-group">
+          <label for="experiencia">Última experiência:</label>
+          <input type="text" id="experiencia" name="experiencia" placeholder="Ex: Atendente, Auxiliar..." required />
+        </div>
+
+        <div class="item-group">
+          <label for="pretensaoSalarial">Pretensão salarial (R$):</label>
+          <input type="number" id="pretensaoSalarial" name="pretensaoSalarial" min="1600" max="10000" step="100"
+            value="1600" required />
+        </div>
+
+        <div class="item-group buttons">
+          <button type="submit">Enviar</button>
+          <button type="reset">Limpar</button>
+        </div>
+
+      </div>
+    </form>
+  </main>
+</body>
+
+</html>
