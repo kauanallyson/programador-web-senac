@@ -11,7 +11,7 @@ $(() => {
   let indiceCor = 0;
   let intervalo = null;
 
-  const tututuru = new Audio("./audio/tututuru.mp3");
+  const tututuru = new Audio("../audio/tututuru.mp3");
 
   const $result = $("#result");
 
