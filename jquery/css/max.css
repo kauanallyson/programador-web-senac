@@ -42,16 +42,3 @@ aside img {
   font-weight: bold;
   font-size: 1.1rem;
 }
-
-img:hover {
-  animation: spin 750ms linear infinite;
-}
-
-@keyframes spin {
-  from {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-  to {
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
-}
