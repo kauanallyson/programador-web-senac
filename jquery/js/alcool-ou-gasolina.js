@@ -12,24 +12,33 @@ class Combustivel {
 }
 
 function mostrarErro(mensagem) {
-  $("#mensagemErro").remove();
+  const existente = document.getElementById("mensagemErro");
+  if (existente) existente.remove();
 
-  const erroHtml = `
-    <div id="mensagemErro" class="alert alert-danger alert-dismissible fade show position-fixed" 
-         style="top: 20px; right: 20px; z-index: 9999; min-width: 300px;">
-      <i class="fas fa-exclamation-triangle me-2"></i>${mensagem}
-      <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-    </div>
+  const div = document.createElement("div");
+  div.id = "mensagemErro";
+  div.className =
+    "alert alert-danger alert-dismissible fade show position-fixed";
+  div.style.cssText = "top:20px; right:20px; z-index:9999; min-width:300px;";
+  div.innerHTML = `
+    <i class="fas fa-exclamation-triangle me-2"></i>${mensagem}
+    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
   `;
 
-  $("body").append(erroHtml);
-  setTimeout(() => $("#mensagemErro").fadeOut(), 5000);
+  document.body.appendChild(div);
+
+  setTimeout(() => {
+    div.classList.remove("show");
+    div.remove();
+  }, 5000);
 }
 
 function mostrarConfirmacao(callback) {
-  $("#modalConfirmacao").remove();
+  const existente = document.getElementById("modalConfirmacao");
+  if (existente) existente.remove();
 
-  const modalHtml = `
+  const modalHtml = document.createElement("div");
+  modalHtml.innerHTML = `
     <div class="modal fade" id="modalConfirmacao" tabindex="-1">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content border-0 shadow">
@@ -45,10 +54,10 @@ function mostrarConfirmacao(callback) {
           </div>
           <div class="modal-footer justify-content-center">
             <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
-              <i class="fas fa-times me-1"></i>Cancelar
+              Cancelar
             </button>
             <button type="button" class="btn btn-danger" id="confirmarDelete">
-              <i class="fas fa-trash-alt me-1"></i>Limpar Tudo
+              Limpar Tudo
             </button>
           </div>
         </div>
@@ -56,23 +65,20 @@ function mostrarConfirmacao(callback) {
     </div>
   `;
 
-  $("body").append(modalHtml);
+  document.body.appendChild(modalHtml);
 
-  const modal = new bootstrap.Modal(
-    document.getElementById("modalConfirmacao"),
-  );
+  const modalEl = document.getElementById("modalConfirmacao");
+  const modal = new bootstrap.Modal(modalEl);
   modal.show();
 
-  $(document)
-    .off("click", "#confirmarDelete")
-    .on("click", "#confirmarDelete", function () {
-      modal.hide();
-      callback();
-    });
+  document.getElementById("confirmarDelete").addEventListener("click", () => {
+    modal.hide();
+    callback();
+  });
 }
 
 function resetarLista() {
-  mostrarConfirmacao(function () {
+  mostrarConfirmacao(() => {
     combustiveis = [];
     listarCombustiveis();
     mostrarErro("Histórico limpo com sucesso!");
@@ -80,23 +86,23 @@ function resetarLista() {
 }
 
 function listarCombustiveis() {
-  const container = $("#result");
+  const container = document.getElementById("result");
 
   if (!combustiveis.length) {
-    container.html(`
+    container.innerHTML = `
       <div class="col-12 text-center empty-state">
         <i class="fas fa-chart-line fa-4x mb-3 text-muted"></i>
         <p class="h5">Aguardando dados para comparação...</p>
       </div>
-    `);
+    `;
     return;
   }
 
-  const melhor = combustiveis.reduce((prev, curr) =>
-    curr.custoPorKm < prev.custoPorKm ? curr : prev,
+  const melhor = combustiveis.reduce((a, b) =>
+    b.custoPorKm < a.custoPorKm ? b : a,
   );
 
-  const html = combustiveis
+  container.innerHTML = combustiveis
     .map((comb) => {
       const isMelhor = comb === melhor;
       return `
@@ -113,11 +119,12 @@ function listarCombustiveis() {
               </div>
               ${
                 isMelhor
-                  ? '<span class="badge-winner"><i class="fas fa-trophy me-1"></i> Mais Econômico</span>'
+                  ? `<span class="badge-winner">
+                      <i class="fas fa-trophy me-1"></i> Mais Econômico
+                    </span>`
                   : ""
               }
             </div>
-            
             <div class="row align-items-center">
               <div class="col-sm-7">
                 <p class="mb-0 text-muted small">Custo por Km</p>
@@ -125,7 +132,7 @@ function listarCombustiveis() {
               </div>
               <div class="col-sm-5 text-sm-end mt-3 mt-sm-0">
                 <div class="text-secondary small">Preço pago:</div>
-                <div class="fw-bold text-dark">R$ ${comb.precoPorLitro.toFixed(2)} /L</div>
+                <div class="fw-bold">R$ ${comb.precoPorLitro.toFixed(2)} /L</div>
               </div>
             </div>
           </div>
@@ -134,51 +141,37 @@ function listarCombustiveis() {
     `;
     })
     .join("");
-
-  container.html(html);
 }
 
-$(() => {
-  $("#formCombustiveis").on("submit", function (e) {
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("formCombustiveis");
+
+  form.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    const nome = $("#nome").val().trim();
-    const km = parseFloat($("#kmPercorridos").val());
-    const litros = parseFloat($("#litros").val());
-    const preco = parseFloat($("#preco").val());
+    const data = new FormData(form);
 
-    if (!nome) {
-      mostrarErro("Nome do combustível é obrigatório.");
-      $("#nome").focus();
-      return;
-    }
+    const nome = data.get("nome").trim();
+    const km = parseFloat(data.get("kmPercorridos"));
+    const litros = parseFloat(data.get("litros"));
+    const preco = parseFloat(data.get("preco"));
 
-    if (isNaN(km) || km <= 0) {
-      mostrarErro("Distância deve ser maior que zero.");
-      $("#kmPercorridos").focus();
-      return;
-    }
+    if (!nome) return mostrarErro("Nome do combustível é obrigatório.");
+    if (!km || km <= 0)
+      return mostrarErro("Distância deve ser maior que zero.");
+    if (!litros || litros <= 0)
+      return mostrarErro("Litros devem ser maiores que zero.");
+    if (!preco || preco <= 0)
+      return mostrarErro("Preço deve ser maior que zero.");
 
-    if (isNaN(litros) || litros <= 0) {
-      mostrarErro("Litros devem ser maiores que zero.");
-      $("#litros").focus();
-      return;
-    }
-
-    if (isNaN(preco) || preco <= 0) {
-      mostrarErro("Preço deve ser maior que zero.");
-      $("#preco").focus();
-      return;
-    }
-
-    const novo = new Combustivel(nome, km, litros, preco);
-    combustiveis.push(novo);
+    combustiveis.push(new Combustivel(nome, km, litros, preco));
     listarCombustiveis();
 
-    $("#formCombustiveis")[0].reset();
-    $("#nome").focus();
+    form.reset();
+    document.getElementById("nome").focus();
   });
 
-  $("#btnLimpar").on("click", resetarLista);
+  document.getElementById("btnLimpar").addEventListener("click", resetarLista);
+
   listarCombustiveis();
 });
