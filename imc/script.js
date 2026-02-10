@@ -1,5 +1,5 @@
 const form = document.getElementById("form-imc");
-const resultadoEl = document.getElementById("resultado");
+const resultadoP = document.getElementById("resultado");
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
@@ -13,7 +13,7 @@ function calcularIMC() {
   const altura = Number(form.altura.value);
 
   if (!peso || !altura || peso <= 0 || altura <= 0) {
-    resultadoEl.innerHTML = "";
+    resultadoP.innerHTML = "";
     return;
   }
 
@@ -27,7 +27,7 @@ function calcularIMC() {
     Peso ideal aproximado: <strong>${pesoIdeal.toFixed(1)} kg</strong>
   `;
 
-  resultadoEl.innerHTML = mensagem;
+  resultadoP.innerHTML = mensagem;
 }
 
 function getClassificacaoIMC(imc) {
