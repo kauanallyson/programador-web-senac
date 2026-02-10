@@ -1,47 +1,47 @@
-function calculaImc() {
-  const form = document.querySelector("form");
-  const formData = new FormData(form);
+const form = document.getElementById("form-imc");
+const resultadoEl = document.getElementById("resultado");
 
-  const peso = Number(formData.get("peso"));
-  const altura = Number(formData.get("altura"));
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  calcularIMC();
+});
 
-  if (!peso || !altura) {
-    document.querySelector("#resultado").innerHTML = "";
+form.addEventListener("input", calcularIMC);
+
+function calcularIMC() {
+  const peso = Number(form.peso.value);
+  const altura = Number(form.altura.value);
+
+  if (!peso || !altura || peso <= 0 || altura <= 0) {
+    resultadoEl.innerHTML = "";
     return;
   }
 
-  const imc = peso / Math.pow(altura, 2);
+  const imc = peso / (altura * altura);
+  const classificacao = getClassificacaoIMC(imc);
+  const pesoIdeal = getPesoIdeal(altura);
 
-  document.querySelector("#resultado").innerHTML =
-    `IMC = ${imc.toFixed(2)} | ${indiceDeObesidade(imc)}
-    <br>
-    O seu peso ideal é ${pesoIdeal(altura).toFixed(2)}Kg`;
+  let mensagem = `
+    <strong>IMC: ${imc.toFixed(2)}</strong><br>
+    ${classificacao}<br><br>
+    Peso ideal aproximado: <strong>${pesoIdeal.toFixed(1)} kg</strong>
+  `;
+
+  resultadoEl.innerHTML = mensagem;
 }
 
-function indiceDeObesidade(imc) {
-  if (imc >= 35) {
-    return "Obesidade Extrema";
-  } else if (imc >= 30) {
-    return "Obesidade";
-  } else if (imc >= 25) {
-    return "Excesso de peso";
-  } else if (imc >= 18.5) {
-    return "Peso Normal";
-  } else {
-    return "Baixo Peso";
-  }
+function getClassificacaoIMC(imc) {
+  if (imc >= 40) return "Obesidade Grau III (Extrema)";
+  if (imc >= 35) return "Obesidade Grau II (Severa)";
+  if (imc >= 30) return "Obesidade Grau I";
+  if (imc >= 25) return "Sobrepeso";
+  if (imc >= 18.5) return "Peso normal";
+  if (imc >= 17) return "Baixo peso";
+  if (imc >= 16) return "Baixo peso grave";
+  return "Baixo peso muito grave";
 }
 
-function pesoIdeal(altura) {
-  const IMC_IDEAL = 25;
-  return Math.pow(altura, 2) * IMC_IDEAL;
+function getPesoIdeal(altura) {
+  const IMC_IDEAL = 22.5;
+  return altura * altura * IMC_IDEAL;
 }
-
-document.querySelector("form").addEventListener("submit", (e) => {
-  e.preventDefault();
-  calculaImc();
-});
-
-document
-  .querySelectorAll('input[type="number"]')
-  .forEach((input) => input.addEventListener("input", calculaImc));
