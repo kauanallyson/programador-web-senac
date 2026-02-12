@@ -23,7 +23,7 @@ function calcularIMC() {
 
   let mensagem = `
     <strong>IMC: ${imc.toFixed(2)}</strong><br>
-    ${classificacao}<br><br>
+    ${classificacao}<br>
     Peso ideal aproximado: <strong>${pesoIdeal.toFixed(1)} kg</strong>
   `;
 
