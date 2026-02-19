@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Senac - Programador Web</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+    crossorigin="anonymous" />
+  <!-- Font Awesome -->
+  <script
+    src="https://kit.fontawesome.com/2da055be12.js"
+    crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-light">
+  <main class="container vh-100 d-flex align-items-center">
+    <div class="row justify-content-center w-100">
+      <div class="col-12 col-md-8 col-lg-6">
+        <div class="card shadow">
+          <div class="card-header text-center fw-bold">
+            <i class="fa-solid fa-code"></i> Programador Web 2026
+          </div>
+
+          <div class="card-body text-center">
+            <h5 class="card-title">Estudos em HTML, CSS, JS e PHP</h5>
+            <p class="card-subtitle text-muted">Lista de tópicos</p>
+          </div>
+
+          <ul class="list-group list-group-flush text-center">
+            <li class="list-group-item">
+              <a href="bootstrap/card.html">Cards</a>
+            </li>
+            <li class="list-group-item">
+              <a href="bootstrap/carrossel.html">Carousel</a>
+            </li>
+            <li class="list-group-item">
+              <a href="bootstrap/navbar.html">Barra de navegação</a>
+            </li>
+            <li class="list-group-item">
+              <a href="bootstrap/table.html">Tabelas</a>
+            </li>
+            <li class="list-group-item">
+              <a href="bootstrap/portal-uva.html">Clone portal da uva</a>
+            </li>
+            <li class="list-group-item">
+              <a href="alcool-ou-gasolina">Álcool ou gasolina?</a>
+            </li>
+            <li class="list-group-item">
+              <a href="imc">Calculadora de Imc</a>
+            </li>
+            <li class="list-group-item">
+              <a href="max">Max Verstappen</a>
+            </li>
+            <li class="list-group-item">
+              <a href="todo">Tarefas</a>
+            </li>
+            <li class="list-group-item">
+              <a href="api-ibge">API IBGE</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Bootstrap JS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
