@@ -5,18 +5,13 @@ class Piloto
         public string $nome,
         public string $sigla,
         public string $nacionalidade,
-        public string $equipe,
+        public int $id_equipe,
         public string $licenca,
         public string $bio,
         public string $nascimento,
         public int $numeroCarro,
-        public int $titulos,
+        public int $titulos
     ) {}
-
-    public function getEquipeFormatada(): string
-    {
-        return ucwords(str_replace('_', ' ', $this->equipe));
-    }
 
     public function getIdade(): int
     {
